@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>invironment</title>
+	<link rel="stylesheet" type="text/css" href="css/invironment.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	
+	<style>
+	</style>
+</head>
+<body background="bg_2.jpg" class="bg">
+<input type="checkbox" name="" id="menu-btn">
+	<div class="header">
+		<div class="logo">
+			<img src="iii/logo.jpg" height="128" width="352" alt="">
+		</div>
+		<div class="hb"><label for="menu-btn"><i class="fa fa-bars"></i></label></div>
+		<ul class="menu">
+			<li><a href="news.html">最新消息</a></li>
+			<li><a href="teachers.htm">師資介紹</a></li>
+			<li><a href="class.html">課表</a></li>
+			<li><a href="charge.html">課程費用</a></li>
+			<li><a href="invironment.htm">環境</a></li>
+		</ul>
+	</div>
+</div><!--header-->
+<div class="container">
+	<div class="content">
+		<img src="invironment/house.jpg" alt="">
+		<div class="txt">
+		<div class="EMS">
+			<h1>enjoy music studio</h1>
+		</div>
+			<p>將時尚、藝術帶入街舞的語彙中，結合跨領域的資源，是台灣
+                 <br>當代街舞藝術的最佳發展中心。自成立以來，不斷堅持
+                        <br>舞蹈教學的專業與演出編排的創意。未來也將持續
+                              <br>栽培街舞新血，舉辦具前瞻性的年度大秀，讓
+                               <br>所有舞蹈表演愛好者，和enjoy music studio
+                                  <br>一起推動台灣的街舞藝術。
+                                  </p>
+		</div><!--txt-->
+	</div>
+</div><!--container-->
+<!-- ******************************** -->
+<div class="turnpic">
+	<div class="inside">
+		<ul class="turnpiclist">
+			<li>
+				<div class="minpic">
+					<img src="invironment/door.png" alt="">
+				</div>
+				<div class="pictxt">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia eligendi obcaecati consequatur enim, neque sint, laudantium dolores tempore adipisci distinctio!
+				</div>
+			</li>
+			<li>
+				<div class="minpic">
+					<img src="invironment/studio.jpg" alt="">
+				</div>
+				<div class="pictxt">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio et magni doloribus labore tempora nostrum dolore nesciunt, tenetur animi?
+				</div>
+			</li>
+			<li>
+				<div class="minpic">
+					<img src="invironment/studio2.jpg" alt="">
+				</div>
+				<div class="pictxt">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, reprehenderit, beatae. Dolores minima sit, mollitia similique. Corporis amet, perferendis nihil.
+				</div>
+			</li>
+			<li>
+				<div class="minpic">
+					<img src="invironment/studio3.JPG" alt="">
+				</div>
+				<div class="pictxt">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque illum voluptatem non laboriosam eos cupiditate expedita ut omnis ipsa quia?
+				</div>
+			</li>
+		</ul>
+	</div><!--inside-->
+</div><!--turnpic-->
+
+<!-- *************************** -->
+<div class="box">
+	<div class="wrap">
+		<ul class="piclist">
+			<li>
+				<div class="inpic pic">
+					<img src="invironment/door.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="inpic pic">
+					<img src="invironment/studio.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="inpic pic">
+					<img src="invironment/studio2.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="inpic pic">
+					<img src="invironment/studio3.JPG" alt="">
+				</div>
+			</li>
+		</ul>
+	</div><!--wrap-->
+</div><!--box-->
+<script>
+	function showpic(){
+		var img1 = document.getElementById('img1');
+		img1.style.transition = ".8s";
+		img1.style.opacity = 0;
+	}
+	function ini(){
+		document.getElementById("btn").onclick = showimg;
+	}
+	window.onload = ini;
+</script>
+
+</body>
+</html>

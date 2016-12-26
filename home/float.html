@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style:none;
+}
+	.container{
+		position: relative;
+		width: 100%;
+		max-width:1000px;
+		border:solid 1px red;
+		margin:auto;
+	}
+	.row{
+		width: 100%;
+		height:auto;
+	}
+	.row:after{
+		display:block;
+		clear:both;
+	}
+	.col{
+		width: 33.3333%;
+		float:left;
+		padding:1px;
+	}
+	.box img{
+		width: 100%;
+		height:auto;
+	}
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col box">
+			<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+		</div>
+		<div class="col box">
+			<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+		</div>
+		<div class="col box">
+			<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+		</div>
+	</div>
+</div>
+</body>
+</html>

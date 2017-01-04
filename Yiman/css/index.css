@@ -6,7 +6,7 @@ h1,h2,h4,input{
 }
 *{
     outline: none;
-    /*outline: 1px solid #00bb00;*/
+    outline: 1px solid #00bb00;
 }
 nav{
     width: 89%;
@@ -46,6 +46,9 @@ ul > li > a:hover{
 	clear: both;
 	height: 0;
 	}
+.col-lg-4 img{
+    width: 100%;
+}
 .arrLeft , .arrRight{
     position: absolute;
     width: 20%;
@@ -170,6 +173,7 @@ a:hover,a:focus{
     width: 100%;
     background-image: linear-gradient(to right,rgba(34,28,26,1) 0,rgba(76,51,38,1) 100%);
     height: auto;
+    padding-bottom: 20px;
 }
 .word > * {
     float: left;
@@ -232,8 +236,8 @@ input:hover,input:active{
     padding: 3%;
     position: relative;
     background-color: #fbfaf8;
-    width: 100%;
-    width: 371px;
+    /*width: 100%;*/
+    /*width: 371px;*/
 }
 .trangle{
     width:0px;
@@ -352,8 +356,9 @@ input:hover,input:active{
 .recentWord{
     box-sizing: border-box;
     padding: 4% 7%;
-    width: 370px;
+    width: 100%;
     text-align: left;
+    margin: auto;
     background-color: #fff;
     border:1px solid #ebebeb;
     border-top: none;
@@ -364,6 +369,9 @@ input:hover,input:active{
 }
 .recent{
     margin-bottom: 50px;
+}
+.recent img{
+    width: 100%;
 }
 .recent:hover .recentWord{
     background-color: #362f2d;
@@ -383,6 +391,7 @@ input:hover,input:active{
 .wrapLogo{
     position: relative;
     width: 100%;
+    height: auto;
 }
 .bg4{
     width: 100%;
@@ -405,7 +414,8 @@ input:hover,input:active{
 .downLogo img{
     width: 100%;
 }
-.wrapHam{
+/*hamberger*/
+.hamMenu{
     content: "";
     display: block;
     cursor: pointer;
@@ -416,34 +426,6 @@ input:hover,input:active{
     height: 30px;
     display: none;
 }
-.ham,.ham:after,.ham:before{
-    content: "";
-    cursor: pointer;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 1000;
-    top: 40%;
-    transition: .4s;
-}
-.ham:before{
-    top:-8px;
-    left: 0;
-}
-.ham:after{
-    top: 8px;
-    left: 0;
-}
-.wrapHam:hover .ham:before{
-    transform: rotate(45deg);
-    top: 0;
-}
-.wrapHam:hover .ham:after{
-    transform: rotate(-45deg);
-    top: 0;
-}
 #menu-btn{
     position: absolute;
     width: 30px;
@@ -453,7 +435,64 @@ input:hover,input:active{
     right: 5%;
     opacity: 0;
 }
+.ham{
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1000;
+}
+.menuTop{
+    position: absolute;
+    top: 0;
+    transition: .5s;
+}
+.menuMiddle{
+    position: absolute;
+    top: 10px;
+    transition: .5s;
+}
+.menuBotton{
+    position: absolute;
+    top: 20px;
+    transition: .5s;
+}
+#menu-btn:checked ~ nav header ul{
+    left: 0;
+}
+#menu-btn:checked .hamMenu .menuTop{
+    transform: rotate(45deg);
+    top: 0;
+}
+#menu-btn:checked .hamMenu .menuMiddle{
+    opacity: 0;
+}
+#menu-btn:checked .hamMenu .menuBottom{
+    transform: rotate(-45deg);
+}
+@media screen and (max-width: 1350px) {
+    .tag > *{
+        float: none;
+        margin-bottom: 14px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .col-lg-4{
+        width: 50%;
+        float: left;
+    }
+}
+@media screen and (max-width: 1050px) {
+    /*for coffee*/
+    .wrapCoffee{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 1000px) {
+    .hamMenu{
+        display: block;
+    }
     nav{
         width: 100%;
         top: 0;
@@ -469,7 +508,7 @@ input:hover,input:active{
         position: absolute;
         padding: 0;
         margin: 0;
-        width: 42%;
+        width: 50%;
         height: 100vh;
         top: 0;
         left: -125%;
@@ -481,17 +520,8 @@ input:hover,input:active{
         padding-left: 9%;
         padding-bottom: 3%;
     }
-    #menu-btn:checked ~ nav header ul{
-        left: 0;
-    }
-    .wrapHam:hover ul{
-        left: 0;
-    }
     .logo{
         text-align: center;
-    }
-    .wrapHam{
-        display: block;
     }
     .page1 img{
         width: 100%;
@@ -512,11 +542,86 @@ input:hover,input:active{
     .purchase{
         margin: auto;
     }
-    .block{
-        height: 225px;
+}
+@media screen and (max-width: 900px) {
+    .handWord{
+        top: 5%;
+    }
+    .wrapVideo{
+        margin-top: 50px;
+    }
+    .col-md-3{
+        width: 70%;
+        margin: auto;
+    }
+    .mb{
+        margin-bottom: 10px;
+    }
+    .mtop{
+        margin-top: 10px;
+    }
+    .carousel-caption h2{
+        font-size: 12px;
+    }
+    .carousel-caption h1{
+        font-size: 10px;
+    }
+    .page1 img{
+        width: 70%;
+    }
+    .pageL img,.pageR img{
+        width: 64%;
+    }
+    .pageL img{
+        float: left;
+    }
+    .pageR img{
+        float: right;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapCoffee{
+        padding-top: 20px;
+    }
+    .coffee{
+        width: 100%;
+        float: none;
+        margin: auto;
+    }
+    .play{
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+    }
+    .playWord {
+        display: none;
+    }
+    .handWord{
+        width: 40%;
+        right: 0;
+    }
+    .handWord p{
+        display: none;
     }
 }
 @media screen and (max-width: 500px) {
+    .handWord{
+        top: 0px;
+    }
+    .col-md-3{
+        width: 92%;
+        margin: auto;
+    }
+    .col-lg-4{
+        width: 100%;
+    }
+    .carousel-caption {
+        padding-bottom: 0;
+    }
+    .carousel-caption p{
+        display: none;
+    }
     .mb{
         margin-bottom: 0;
     }

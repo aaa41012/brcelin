@@ -460,15 +460,16 @@ input:hover,input:active{
 #menu-btn:checked ~ nav header ul{
     left: 0;
 }
-#menu-btn:checked .hamMenu .menuTop{
+#menu-btn:checked ~ .hamMenu .menuTop{
     transform: rotate(45deg);
-    top: 0;
+    top: 10px;
 }
-#menu-btn:checked .hamMenu .menuMiddle{
-    opacity: 0;
-}
-#menu-btn:checked .hamMenu .menuBottom{
+#menu-btn:checked ~ .hamMenu .menuMiddle{
+    top: 10px;
     transform: rotate(-45deg);
+}
+#menu-btn:checked ~ .hamMenu .menuBotton{
+    width: 0;
 }
 @media screen and (max-width: 1350px) {
     .tag > *{

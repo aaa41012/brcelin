@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./carRace.js"></script>
+<body>
+<!-- 赛车表演区 -->
+<div class="nothing">
+    <div class="wrapRace" id="wrapRace">
+        <div class="alertMsgCar">
+            <!-- 警示 -->
+            <div class="msgText">
+                <div class="msgTextInner"></div>
+                <div class="msgConfirm">確定</div>
+            </div>
+        </div>
+        <div class="wrap_loading">
+            <!--loading-->
+            <div class="forAbso">
+                <div class="loading outer">
+                    <div class="loading inner"></div>
+                </div>
+                <div class="loadWord">载入中</div>
+            </div>
+        </div>
+        <div class="RaceSpace">
+            <!-- 賽道-->
+            <div class="wrapBilling">
+                <!-- 結算畫面 -->
+                <div class="billing">
+                    <div class="rank">
+                        <img src="./carRace/cutEND/bg_top.png">
+                    </div>
+                    <div class="carRank">
+                        <div class="st">
+                            <img src="./carRace/cutEND/carEND1.png" id="no1">
+                        </div>
+                        <div class="nd carMid">
+                            <img src="./carRace/cutEND/carEND2.png" id="no2">
+                        </div>
+                        <div class="rd carMid">
+                            <img src="./carRace/cutEND/carEND3.png" id="no3">
+                        </div>
+                    </div>
+                    <div class="wrap_ribbon">
+                        <div class="money_icon">
+                            <img src="./carRace/cutEND/icon_money.png">
+                        </div>
+                        <div class="ribbon">
+                            <img src="./carRace/cutEND/bg_win_money.png">
+                        </div>
+                        <div class="car_win_money" id="win_money">
+                            +
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fullScreen" id="fullScreen"></div>
+            <!--lightBox-->
+            <!--  -->
+            <div class="startLine" id="startLine">
+                <!-- 起跑線 -->
+                <img src="./carRace/grid.png">
+            </div>
+            <div class="m300">
+                <img src="./carRace/300m.png">
+            </div>
+            <div class="m200">
+                <img src="./carRace/200m.png">
+            </div>
+            <div class="m100">
+                <img src="./carRace/100m.png">
+            </div>
+            <div class="wrapCar clearfix">
+                <!-- 車子 -->
+                <div class="car" id="car1">
+                    <div class="headScore" id="headScore1">
+                        <img src="./carRace/car_number1.png">
+                    </div>
+                    <img src="./carRace/car01.png" id="test">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire1">
+                </div>
+                <div class="car" id="car2">
+                    <div class="headScore" id="headScore2">
+                        <img src="./carRace/car_number2.png">
+                    </div>
+                    <img src="./carRace/car02.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire2">
+                </div>
+                <div class="car" id="car3">
+                    <div class="headScore" id="headScore3">
+                        <img src="./carRace/car_number3.png">
+                    </div>
+                    <img src="./carRace/car03.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire3">
+                </div>
+                <div class="car" id="car4">
+                    <div class="headScore" id="headScore4">
+                        <img src="./carRace/car_number4.png">
+                    </div>
+                    <img src="./carRace/car04.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire4">
+                </div>
+                <div class="car" id="car5">
+                    <div class="headScore" id="headScore5">
+                        <img src="./carRace/car_number5.png">
+                    </div>
+                    <img src="./carRace/car05.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire5">
+                </div>
+                <div class="car" id="car6">
+                    <div class="headScore" id="headScore6">
+                        <img src="./carRace/car_number6.png">
+                    </div>
+                    <img src="./carRace/car06.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire6">
+                </div>
+                <div class="car" id="car7">
+                    <div class="headScore" id="headScore7">
+                        <img src="./carRace/car_number7.png">
+                    </div>
+                    <img src="./carRace/car07.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire7">
+                </div>
+                <div class="car" id="car8">
+                    <div class="headScore" id="headScore8">
+                        <img src="./carRace/car_number8.png">
+                    </div>
+                    <img src="./carRace/car08.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire8">
+                </div>
+                <div class="car" id="car9">
+                    <div class="headScore" id="headScore9">
+                        <img src="./carRace/car_number9.png">
+                    </div>
+                    <img src="./carRace/car09.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire9">
+                </div>
+                <div class="car" id="car10">
+                    <div class="headScore" id="headScore10">
+                        <img src="./carRace/car_number10.png">
+                    </div>
+                    <img src="./carRace/car10.png">
+                    <img src="./carRace/speedUp.gif" class="fire" id="fire10">
+                </div>
+                <div class="endLine" id="endLine">
+                    <!--終點線-->
+                    <img src="./carRace/grid.png">
+                </div>
+            </div>
+        </div>
+        <div class="reciprocal" id="raceReciprocal">
+            <!-- 倒數 -->
+            <div class="raceWood">
+                <img src="./carRace/flag.png">
+            </div>
+            <div class="raceLight">
+                <div class="light">
+                    <img src="./carRace/red_light.png" id="raceLight">
+                </div>
+                <div class="raceNumber">
+                    <img src="./carRace/sec_5.png" id="raceNum">
+                </div>
+            </div>
+        </div>
+        <div class="racePlace clearfix">
+            <!-- 分數-->
+            <div class="raceScore" id="score1">
+                <img src="./carRace/car_number1.png">
+            </div>
+            <div class="raceScore" id="score2">
+                <img src="./carRace/car_number2.png">
+            </div>
+            <div class="raceScore" id="score3">
+                <img src="./carRace/car_number3.png">
+            </div>
+            <div class="raceScore" id="score4">
+                <img src="./carRace/car_number4.png">
+            </div>
+            <div class="raceScore" id="score5">
+                <img src="./carRace/car_number5.png">
+            </div>
+            <div class="raceScore" id="score6">
+                <img src="./carRace/car_number6.png">
+            </div>
+            <div class="raceScore" id="score7">
+                <img src="./carRace/car_number7.png">
+            </div>
+            <div class="raceScore" id="score8">
+                <img src="./carRace/car_number8.png">
+            </div>
+            <div class="raceScore" id="score9">
+                <img src="./carRace/car_number9.png">
+            </div>
+            <div class="raceScore" id="score10">
+                <img src="./carRace/car_number10.png">
+            </div>
+            <hr class="whiteLine">
+        </div>
+    </div>
+</div>
+<!-- 賽車表演區結束 -->
+</body>
+</html>
+<link rel="stylesheet" href="./carRace.css">

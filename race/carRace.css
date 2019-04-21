@@ -1,0 +1,819 @@
+.alertMsgCar{
+	position:absolute;
+	opacity:0;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.8);
+	perspective: 500px;
+    -moz-perspective: 500px;
+    -webkit-perspective: 500px;
+	z-index:150;
+}
+.alertMsgZ{
+	-webkit-transform: translateZ(150px);
+     -moz-transform: translateZ(150px);
+     -ms-transform: translateZ(150px);
+     transform: translateZ(150px);
+}
+.msgConfirm{
+	text-align:center;
+	width:50px;
+	height:30px;
+	border:1px solid rgb(51,51,51);
+	border-radius: 5px;
+	z-index:150;
+	opacity:0;
+}
+.msgText{
+	color:rgb(51,51,51);
+	font-family: Microsoft JhengHei;
+	position:absolute;
+	left:25%;
+	top:25%;
+	width:50%;
+	height:50%;
+	border-radius: 5px;
+	background-color:rgb(236,236,236);
+	z-index:150;
+}
+.msgTextInner{
+	margin-top:20%;
+	text-align:center;
+	width:100%;
+}
+.msgConfirm{
+	display: -webkit-flex;
+  	display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+  -webkit-justify-content: center;
+    justify-content: center;
+	width:30%;
+	margin:auto;
+	margin-top:10%;
+	cursor:pointer;
+}
+
+/*loading*/
+.wrap_loading {
+    box-sizing: border-box;
+    display: table-cell;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+     -webkit-transform: translateZ(100px);
+     -moz-transform: translateZ(100px);
+     -ms-transform: translateZ(100px);
+     transform: translateZ(100px);
+    background-color: black;
+}
+.forAbso {
+    position: absolute;
+    width: 18%;
+    left: 41%;
+    top: 40%;
+}
+.loadWord {
+    color:#fff;
+    margin-top: 15%;
+    font-family: Microsoft JhengHei;
+    font-size: 1.3em;
+}
+.loading {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-top-color: #AE0000;
+    border-bottom-color: #AE0000;
+    border-radius: 50% 0;
+    box-shadow: 0 0 0.5em/2 #AE0000 inset;
+}
+
+.outer {
+    animation: spin 0.55s infinite linear;
+}
+
+.inner {
+    animation: spin 0.55s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/*loading*/
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.wrapRace {
+    width: 100%;
+    height: 250px;
+    perspective-origin: center center;
+    -moz-perspective-origin: center center;
+    -webkit-perspective-origin: center center;
+        perspective: 500px;
+    -moz-perspective: 500px;
+    -webkit-perspective: 500px;
+    background: black;
+    overflow: hidden;
+}
+
+.RaceSpace {
+    width: 107%;
+    height: 90%;
+    position: relative;
+    transform-style: 3d;
+    -moz-transform-style: 3d;
+    -webkit-transform-style: 3d;
+    background-image: url("./carRace/road.png");
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*padding: 4.1%;*/
+    margin-top: -23px;
+    margin-left: -3.5%;
+    overflow: hidden;
+    z-index:20;
+    -webkit-transform: translateZ(20px);
+     -moz-transform: translateZ(20px);
+     -ms-transform: translateZ(20px);
+     transform: translateZ(20px);
+         -webkit-transform: rotateX(16deg);
+     -moz-transform: rotateX(16deg);
+     -ms-transform: rotateX(16deg);
+         transform: rotateX(16deg);
+}
+
+.RaceSpace img {
+    width: 100%;
+}
+
+.m300, .m200, .m100 {
+    position: absolute;
+    width: 68%;
+    left: 16%;
+    margin-top: 130%;
+}
+
+.m300 img, .m200 img, .m100 img {
+    width: 100%;
+}
+
+.startLine {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.endLine {
+    width: 100%;
+    position: absolute;
+    margin-top: 130%;
+    z-index:10;
+    -webkit-transform: translateZ(10px);
+     -moz-transform: translateZ(10px);
+     -ms-transform: translateZ(10px);
+     transform: translateZ(10px);
+}
+
+.endLine img, .startLine img {
+    width: 100%;
+}
+
+.wrapCar {
+    position: relative;
+    margin-top: 4%;
+    padding-left: 3%;
+    padding-right: 4%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapCar>* {
+    float: left;
+}
+
+.car {
+    position: relative;
+    width: 9.5%;
+    height: 20%;
+    margin-left: 0.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transform: rotateX(10deg);
+    z-index: 22;
+     -webkit-transform: translateZ(22px);
+     -moz-transform: translateZ(22px);
+     -ms-transform: translateZ(22px);
+     transform: translateZ(22px);
+}
+
+.car img {
+    width: 100%;
+}
+
+.racePlace {
+    background-color: black;
+    width: 100%;
+    height: 21%;
+    position: absolute;
+    bottom: 17px;
+    left: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 6%;
+    padding-top: 3%;
+    z-index: 60;
+    -webkit-transform: translateZ(60px);
+     -moz-transform: translateZ(60px);
+     -ms-transform: translateZ(60px);
+     transform: translateZ(60px);
+}
+
+.racePlace>* {
+    float: left;
+}
+
+.raceScore {
+    width: 10%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.raceScore img {
+    width: 100%;
+}
+
+.whiteLine {
+    width: 82%;
+    height: 1px;
+    left: 9%;
+    position: absolute;
+    bottom: -3%;
+    border: none;
+    background: #fff;
+}
+
+.reciprocal {
+    position: absolute;
+    background-image: url("./carRace/bg_reciprocal.png");
+    background-size: contain;
+    background-repeat: round;
+    width: 100%;
+    height: 23%;
+    top: 35%;
+    z-index:20;
+    -webkit-transform: translateZ(20px);
+    -moz-transform: translateZ(20px);
+    -ms-transform: translateZ(20px);
+    transform: translateZ(20px);
+}
+
+.reciprocal>* {
+    float: left;
+}
+
+.raceLight {
+    position: absolute;
+    width: 12%;
+    left: 44%;
+}
+
+.raceWood {
+    position: absolute;
+    width: 25%;
+    left: 18%;
+    top: -60%;
+}
+
+.reciprocal img, .light img,.raceNumber img ,.raceWood img {
+    width: 100%;
+}
+.raceNumber {
+    width: 40%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 8px;
+}
+
+#score1, #score2, #score3, #score4, #score5, #score6, #score7, #score8, #score9, #score10 {
+    position: absolute;
+    bottom: 0px;
+    transform: scale(0.55);
+}
+
+#score1, #score2, #score3 {
+    transform: scale(0.85);
+}
+
+#score4, #score5, #score6, #score7, #score8, #score9, #score10 {
+    bottom: -17%;
+}
+
+#score1 {
+    left: 9%;
+}
+
+#score2 {
+    left: 18%;
+}
+
+#score3 {
+    left: 27%;
+}
+
+#score4 {
+    left: 36%;
+}
+
+#score5 {
+    left: 43.5%;
+}
+
+#score6 {
+    left: 51.5%;
+}
+
+#score7 {
+    left: 59%;
+}
+
+#score8 {
+    left: 66.5%;
+}
+
+#score9 {
+    left: 74%;
+}
+
+#score10 {
+    left: 82%;
+}
+
+#fire1, #fire2, #fire3, #fire4, #fire5, #fire6, #fire7, #fire8, #fire9, #fire10 {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    height: auto;
+    bottom: 65%;
+    opacity: 0;
+    z-index:10;
+     -webkit-transform: translateZ(10px);
+     -moz-transform: translateZ(10px);
+       -ms-transform: translateZ(10px);
+               transform: translateZ(10px);
+}
+
+#fullScreen {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+     -webkit-transform: translateZ(10px);
+     -moz-transform: translateZ(10px);
+       -ms-transform: translateZ(10px);
+               transform: translateZ(10px);
+}
+
+.headScore {
+    position: absolute;
+    width: 1%;
+    left: 50%;
+}
+
+.headScore img{
+    width: 100%;
+}
+/* billing */
+
+.wrapBilling {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+}
+
+.billing {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./carRace/cutEND/bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*w72p*/
+.rank {
+    width: 78%;
+    margin: auto;
+}
+
+.rank img {
+    width: 100%;
+}
+
+.carRank {
+    position: absolute;
+    width: 100%;
+    margin-top: -23%;
+}
+
+.st img, .nd img, .rd img {
+    width: 100%;
+}
+
+.st {
+    position: absolute;
+    width: 14%;
+    left: 43%;
+}
+
+.carMid {
+    position: absolute;
+    width: 12%;
+}
+
+.nd {
+    left: 12%;
+}
+
+.rd {
+    right: 12%;
+}
+
+.wrap_ribbon {
+	display:none;
+    position: relative;
+    width: 39%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.wrap_ribbon img {
+    width: 100%;
+}
+
+.money_icon {
+    position: absolute;
+    width: 15%;
+    left: 12%;
+}
+
+.car_win_money {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-size: 1rem;
+    color: rgb(247, 223, 152);
+    font-family: 'Droid Sans', sans-serif;
+    padding-top: 1%;
+}
+/*loading*/
+@media screen and (max-width:340px){
+    .forAbso{
+        width: 20%;
+        left: 40%;
+    }
+    .wrap_ribbon{
+        width: 55%;
+    }
+}
+@media screen and (min-width:320px) and (max-width:500px) {
+    .wrapCar {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width:430px) {
+    .startLine {
+        top: 45px;
+    }
+    #score4, #score5, #score6, #score7, #score8, #score9, #score10 {
+        bottom: -4%;
+    }
+    .car_win_money {
+        padding-top: 0;
+    }
+}
+/* for final billing rank*/
+
+@media screen and (max-width:386px) {
+    .billing {
+        background-size: cover;
+    }
+    .st{
+        left: 42.5%;
+    }
+    #score1, #score2, #score3 {
+        transform: scale(1.1);
+        bottom: 5%;
+    }
+
+    #score4, #score5, #score6, #score7, #score8, #score9, #score10 {
+        transform: scale(0.7);
+        bottom: -3%;
+    }
+}
+
+@media screen and (min-width:387px) {
+    .billing {
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:420px) {
+    .wrapBilling {
+        height: 110%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+/* for final billing rank*/
+
+@media screen and (min-width:500px) {
+    #score1, #score2, #score3 {
+        transform: scale(0.8);
+        bottom: 3px;
+    }
+    #score4, #score5, #score6, #score7, #score8, #score9, #score10{
+    	bottom: -4%;
+    }
+    .reciprocal {
+        height: 24%;
+    }
+    .raceWood {
+        width: 20%;
+        left: 23%;
+    }
+    .billing {
+        background-size: cover;
+        height: 88%;
+    }
+}
+
+@media screen and (min-width:550px) and (max-width:768px) {
+	.whiteLine{
+		bottom: 12%;
+	}
+    .wrapCar {
+        margin-top: 5%;
+    }
+    .startLine {
+        top: 90px;
+    }
+    .billing {
+        height: 100%;
+        top: -14%;
+    }
+    .wrap_ribbon{
+        margin-top: -1%;
+    }
+    .car_win_money {
+        font-size: 2em;
+        padding-top: 0%;
+    }
+}
+@media screen and (max-width:768px) {
+    .forAbso{
+        left: 44%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .wrapCar{
+        margin-top: 5%;
+    }
+    .wrapRace {
+        height: 450px;
+    }
+    .startLine {
+        top: 140px;
+    }
+    .raceWood {
+        width: 16%;
+        left: 29%;
+        margin-top: 5%;
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1024px){
+    .wrapBilling{
+        height: 131%;
+    }
+    .wrap_ribbon{
+        width: 25%;
+        margin-top: -3%;
+    }
+    .car_win_money{
+        font-size: 1.5em;
+        padding-top: 0;
+    }
+    #score1, #score2, #score3{
+    	bottom: -8px;
+    }
+    .whiteLine{
+        height: 2px;
+        bottom: 7px;
+    }
+    .reciprocal{
+        height: 24%;
+    }
+    .raceNumber{
+        margin-top: -5%;
+    }
+}
+@media screen and (min-width:1024px) {
+    .forAbso{
+        left: 47%;
+    }
+    .startLine {
+        top: 140px;
+    }
+    .wrapRace {
+        height: 450px;
+    }
+    .raceWood {
+        width: 15%;
+        left: 30%;
+    }
+}
+
+@-webkit-keyframes rubberBand {
+    from {
+        margin-top: 2px;
+    }
+    10% {
+        margin-top: -13%;
+    }
+    15% {
+        margin-top: -22%;
+        width: 60%;
+    }
+    20% {
+        margin-top: -13%;
+        width: 70%;
+    }
+    30% {
+        margin-top: -12%;
+        width: 78%;
+    }
+    70% {
+        margin-top: -12%;
+        width: 78%;
+    }
+    to {
+        margin-top: -12%;
+        width: 78%;
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        margin-top: 2px;
+    }
+    10% {
+        margin-top: -13%;
+    }
+    15% {
+        margin-top: -22%;
+        width: 60%;
+    }
+    20% {
+        margin-top: -13%;
+        width: 70%;
+    }
+    30% {
+        margin-top: -12%;
+        width: 78%;
+    }
+    70% {
+        margin-top: -12%;
+        width: 78%;
+    }
+    to {
+        margin-top: -12%;
+        width: 78%;
+    }
+}
+
+.rubberBand {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+}
+
+@keyframes juicy {
+    0%{
+        width: 20%;
+        top:-40%;
+        left: 40%;
+    }
+    10%{
+        width: 40%;
+        top: -50%;
+        left: 30%;
+    }
+    20%{
+        width: 60%;
+        top: -80%;
+        left: 20%;
+    }
+    30%{
+        width: 80%;
+        top: -110%;
+        left: 10%;
+    }
+    40%{
+        width: 100%;
+        top: -73%;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        top: -91%;
+        left: 0;
+    }
+    100%{
+        width: 100%;
+        top: -91%;
+        left: 0;
+    }
+}
+
+@-webkit-keyframes juicy {
+    0%{
+        width: 20%;
+        top:-40%;
+        left: 40%;
+    }
+    10%{
+        width: 40%;
+        top: -50%;
+        left: 30%;
+    }
+    20%{
+        width: 60%;
+        top: -80%;
+        left: 20%;
+    }
+    30%{
+        width: 80%;
+        top: -110%;
+        left: 10%;
+    }
+    40%{
+        width: 100%;
+        top: -73%;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        top: -91%;
+        left: 0;
+    }
+    100%{
+        width: 100%;
+        top: -91%;
+        left: 0;
+    }
+}
+.rankJump{
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: juicy;
+    animation-name: juicy;
+    animation-fill-mode:forwards;
+}
+@viewport {
+	width:device-height;
+}
